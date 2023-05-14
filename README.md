@@ -79,9 +79,15 @@ Export the DataFrame to a CSV file.
 ## Part 1: Scrape Titles and Preview Text from Mars News (40 points)
 Automated browsing (with Splinter) was used to visit the Mars news site, and the HTML code was extracted (with Beautiful Soup). (10 points)
 
+https://github.com/hanydief/data_collection-/blob/main/outputs_%26_CSV/P1-Q1.png
+
 The titles and preview text of the news articles were scraped and extracted. (20 points)
 
+https://github.com/hanydief/data_collection-/blob/main/outputs_%26_CSV/P1-Q1.png
+
 The scraped information was stored in the specified Python data structure—specifically, a list of dictionaries. (10 points)
+
+https://github.com/hanydief/data_collection-/blob/main/outputs_%26_CSV/P1-Q3.png
 
 ## Part 2: Scrape and Analyze Mars Weather Data (60 points)
 The HTML table was extracted into a Pandas DataFrame. Either Pandas or Splinter and Beautiful Soup were used to scrape the data. The columns have the correct headings and data types. (15 points)
