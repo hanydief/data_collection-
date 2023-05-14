@@ -50,55 +50,69 @@ Create a Beautiful Soup object and use it to scrape the data in the HTML table. 
 
 Assemble the scraped data into a Pandas DataFrame. The columns should have the same headings as the table on the website. Here’s an explanation of the column headings:
 
-id: the identification number of a single transmission from the Curiosity rover
-terrestrial_date: the date on Earth
-sol: the number of elapsed sols (Martian days) since Curiosity landed on Mars
-ls: the solar longitude
-month: the Martian month
-min_temp: the minimum temperature, in Celsius, of a single Martian day (sol)
-pressure: The atmospheric pressure at Curiosity's location
+- id: the identification number of a single transmission from the Curiosity rover
+- terrestrial_date: the date on Earth
+- sol: the number of elapsed sols (Martian days) since Curiosity landed on Mars
+- ls: the solar longitude
+- month: the Martian month
+- min_temp: the minimum temperature, in Celsius, of a single Martian day (sol)
+- pressure: The atmospheric pressure at Curiosity's location
 Examine the data types that are currently associated with each column. If necessary, cast (or convert) the data to the appropriate datetime, int, or float data types.
 
 ### HINT
 Analyze your dataset by using Pandas functions to answer the following questions:
 
-How many months exist on Mars?
-How many Martian (and not Earth) days worth of data exist in the scraped dataset?
-What are the coldest and the warmest months on Mars (at the location of Curiosity)? To answer this question:
-Find the average minimum daily temperature for all of the months.
-Plot the results as a bar chart.
-Which months have the lowest and the highest atmospheric pressure on Mars? To answer this question:
-Find the average daily atmospheric pressure of all the months.
-Plot the results as a bar chart.
-About how many terrestrial (Earth) days exist in a Martian year? To answer this question:
-Consider how many days elapse on Earth in the time that Mars circles the Sun once.
-Visually estimate the result by plotting the daily minimum temperature.
-Export the DataFrame to a CSV file.
+- How many months exist on Mars?
+- How many Martian (and not Earth) days worth of data exist in the scraped dataset?
+- What are the coldest and the warmest months on Mars (at the location of Curiosity)? To answer this question:
+- Find the average minimum daily temperature for all of the months.
+- Plot the results as a bar chart.
+- Which months have the lowest and the highest atmospheric pressure on Mars? To answer this question:
+- Find the average daily atmospheric pressure of all the months.
+- Plot the results as a bar chart.
+- About how many terrestrial (Earth) days exist in a Martian year? To answer this question:
+- Consider how many days elapse on Earth in the time that Mars circles the Sun once.
+- Visually estimate the result by plotting the daily minimum temperature.
+- Export the DataFrame to a CSV file.
 
 # Requirements
 ## Part 1: Scrape Titles and Preview Text from Mars News (40 points)
-Automated browsing (with Splinter) was used to visit the Mars news site, and the HTML code was extracted (with Beautiful Soup). (10 points)
+- Automated browsing (with Splinter) was used to visit the Mars news site, and the HTML code was extracted (with Beautiful Soup). (10 points)
 
-![P1-Q1](https://github.com/hanydief/data_collection-/blob/main/outputs_%26_CSV/P1-Q1.png)
+  ![P1-Q1](https://github.com/hanydief/data_collection-/blob/main/outputs_%26_CSV/P1-Q1.png)
 
-The titles and preview text of the news articles were scraped and extracted. (20 points)
+- The titles and preview text of the news articles were scraped and extracted. (20 points)
 
-![P1-Q2](https://github.com/hanydief/data_collection-/blob/main/outputs_%26_CSV/P1-Q2.png)
+  ![P1-Q2](https://github.com/hanydief/data_collection-/blob/main/outputs_%26_CSV/P1-Q2.png)
 
-The scraped information was stored in the specified Python data structure—specifically, a list of dictionaries. (10 points)
+- The scraped information was stored in the specified Python data structure—specifically, a list of dictionaries. (10 points)
 
-![P1-Q3](https://github.com/hanydief/data_collection-/blob/main/outputs_%26_CSV/P1-Q3.png)
+  ![P1-Q3](https://github.com/hanydief/data_collection-/blob/main/outputs_%26_CSV/P1-Q3.png)
 
 ## Part 2: Scrape and Analyze Mars Weather Data (60 points)
 The HTML table was extracted into a Pandas DataFrame. Either Pandas or Splinter and Beautiful Soup were used to scrape the data. The columns have the correct headings and data types. (15 points)
 
+  ![P2-Q1a](https://github.com/hanydief/data_collection-/blob/main/outputs_%26_CSV/P2-Q1a.png)
+  ![P2-Q1b_store_data_in_df](https://github.com/hanydief/data_collection-/blob/main/outputs_%26_CSV/P2-Q1b_store_data_in_df.png)
+  
 The data was analyzed to answer the following questions: (10 points)
+- How many months exist on Mars? (5 points)
+- How many Martian days' worth of data are there? (5 points)
 
-How many months exist on Mars? (5 points)
-How many Martian days' worth of data are there? (5 points)
+
 The data was analyzed to answer the following questions, and a data visualization was created to support each answer: (30 points)
+- Which month, on average, has the lowest temperature? The highest? (10 points)
 
-Which month, on average, has the lowest temperature? The highest? (10 points)
-Which month, on average, has the lowest atmospheric pressure? The highest? (10 points)
-How many terrestrial days exist in a Martian year? A visual estimate within 25% was made. (10 points)
-The DataFrame was exported into a CSV file. (5 points)
+  ![P2-Temperature_in_Celisus](https://github.com/hanydief/data_collection-/blob/main/outputs_%26_CSV/Temperature_in_Celisus.png)
+  ![P2-coldest_hotest_Temperature](https://github.com/hanydief/data_collection-/blob/main/outputs_%26_CSV/coldest_hotest_Temperature.png)
+  
+- Which month, on average, has the lowest atmospheric pressure? The highest? (10 points)
+
+  ![P2-Atmospheric_Pressure](https://github.com/hanydief/data_collection-/blob/main/outputs_%26_CSV/Atmospheric_Pressure.png)
+  ![P2-Sorted_Atmospheric_Pressure](https://github.com/hanydief/data_collection-/blob/main/outputs_%26_CSV/Sorted_Atmospheric_Pressure.png)
+  
+- How many terrestrial days exist in a Martian year? A visual estimate within 25% was made. (10 points)
+
+  ![P2-Num_Terrestrial_Days](https://github.com/hanydief/data_collection-/blob/main/outputs_%26_CSV/Num_Terrestrial_Days.png)
+  
+- The DataFrame was exported into a CSV file. (5 points)
